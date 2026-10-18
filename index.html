@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RentX — Vehicle Rentals</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="logo">Rent<span>X</span></div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Vehicles</a>
+        <a href="bookings.html">My Bookings</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Rent the right ride, by the day.</h1>
+        <p class="lead">Cars, SUVs and bikes across the city, ready when you are. Pick a vehicle, choose your dates, and you're booked in under a minute.</p>
+        <div class="hero-stats">
+          <div><strong id="statTotal">0</strong><span>Vehicles listed</span></div>
+          <div><strong id="statAvailable">0</strong><span>Available today</span></div>
+          <div><strong>3</strong><span>Vehicle types</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=60" alt="An SUV parked and ready for rental" />
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap controls">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by vehicle name…" />
+    </div>
+
+    <div class="type-tabs" id="typeTabs">
+      <button data-type="All" class="active">All</button>
+      <button data-type="Cars">Cars</button>
+      <button data-type="SUVs">SUVs</button>
+      <button data-type="Bikes">Bikes</button>
+    </div>
+
+    <div class="filter-row">
+      <label>Fuel
+        <select id="fuelFilter">
+          <option value="All">All</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Electric">Electric</option>
+        </select>
+      </label>
+
+      <label>Transmission
+        <select id="transmissionFilter">
+          <option value="All">All</option>
+          <option value="Automatic">Automatic</option>
+          <option value="Manual">Manual</option>
+        </select>
+      </label>
+
+      <label>Max price / day: <span class="price-value" id="priceValue">₹5,000</span>
+        <input type="range" id="priceFilter" min="500" max="5000" step="100" value="5000" />
+      </label>
+
+      <div class="sort-group">
+        <label>Sort by
+          <select id="sortSelect">
+            <option value="default">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h2>Available vehicles</h2>
+      <span class="count" id="resultCount"></span>
+    </div>
+
+    <div class="vehicle-grid" id="vehicleGrid"></div>
+  </main>
+
+  <footer>RentX — a student portfolio project. Not a real rental service.</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

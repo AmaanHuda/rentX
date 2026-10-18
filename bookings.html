@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RentX — My Bookings</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="wrap">
+      <div class="logo">Rent<span>X</span></div>
+      <div class="nav-links">
+        <a href="index.html">Vehicles</a>
+        <a href="bookings.html" class="active">My Bookings</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="wrap">
+      <h1>My Bookings</h1>
+      <p>Track, review and manage every reservation you've made.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="summary-grid" id="summaryGrid"></div>
+
+    <div class="status-tabs" id="statusTabs">
+      <button data-status="All" class="active">All</button>
+      <button data-status="Upcoming">Upcoming</button>
+      <button data-status="Completed">Completed</button>
+      <button data-status="Cancelled">Cancelled</button>
+    </div>
+
+    <div class="bookings-list" id="bookingsList"></div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>RentX — a student portfolio project. Not a real rental service.</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/bookings.js"></script>
+</body>
+</html>
